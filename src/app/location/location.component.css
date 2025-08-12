@@ -1,0 +1,32 @@
+.div1{
+  background-color: rgb(66, 66, 66);
+  height: 670px;
+  
+}
+.map{
+    margin-left: 380px;
+    margin-top: 60px;
+}
+
+.font{
+  font-family: Arial;
+    margin-top: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.side{
+    margin-top: -670px;
+}
+.font1{
+  font-family: Arial;
+  cursor: pointer;
+}
+.back{
+  background-color: #dba527;
+}
+
+.i1{
+  background-color: rgb(223, 217, 217);
+  border-radius: 50px;
+ padding:8px;
+}

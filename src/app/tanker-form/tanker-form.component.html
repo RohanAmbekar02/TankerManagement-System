@@ -1,0 +1,48 @@
+<div class=" side">
+    <div class="row">
+        <div class="col-12">
+            <div class="card p-3">
+                <form [formGroup]="tankerForm" (ngSubmit)="tankerFormSubmit()">
+                    <h3 class="text-center"> Add Tanker</h3>
+
+                    <label class="mb-2 mt-4"> Tanker Number : </label>
+                    <input type="text" class="form-control" placeholder="Enter Tanker Number" name="tnum"
+                        formControlName="tnum">
+                    <span style="color: red;" *ngIf="tnum && tnum.errors?.['required'] && tnum.touched">This field is
+                        required.</span><br>
+
+                    <label class="mb-2 mt-3"> Driver Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Driver Name" name="dname"
+                        formControlName="dname">
+                    <span *ngIf="dname?.touched && dname?.errors?.['required']" style="color: red;">This field is
+                        required.</span><br>
+
+                    <label class="mt-3">Status</label>
+                    <select formControlName="stat" class="form-control mt-3">
+                        <option value="" disabled selected>Choose Status</option>
+                        <option value="Available">Available</option>
+                        <option value="Unavailable">Unavailable</option>
+                    </select>
+                    <span *ngIf="stat?.touched && stat?.errors?.['required']" class="text-danger">This field is
+                        required.</span><br>
+                    <div class="row">
+                        <div class="col-6 md-3">
+                            <button class=" btn btn-primary btn1 mt-3" type="Submit"
+                                [disabled]="tankerForm.invalid">{{data? 'Edit' : 'Submit'}}</button>
+                        </div>
+                        <div class="col-6 md-3">
+                            <button class=" btn btn-danger  btn1 mt-3" type="button"
+                                [mat-dialog-close]="false">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <router-outlet></router-outlet> -->

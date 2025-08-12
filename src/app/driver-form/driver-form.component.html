@@ -1,0 +1,45 @@
+<!-- <div class="container ">
+<div *ngIf="alertMessage" class="snack w-50 alert alert-{{alertType}} alert-warning alert-dismissible fade show" role="alert">
+  {{ alertMessage }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="alertMessage = ''">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+</div> -->
+
+<form [formGroup]="driverForm" (ngSubmit)="driverFormSubmit()">
+    <h3 class="text-center">Driver Form</h3>
+
+    <label class="mb-2 mt-2"> Driver Name : </label>
+    <input type="text" placeholder="Enter Your Name" name="name" formControlName="name" class="form-control">
+    <span class="text-danger " *ngIf="name && name.invalid && name.touched">This feild is required.</span><br>
+
+    <label class="mb-2 mt-4"> Contact Number : </label>
+    <input type="text" class="form-control" placeholder="Enter Your Contact Number" name="mobile"
+        formControlName="mobile">
+    <span style="color: red;" *ngIf="mobile && mobile.errors?.['required'] && mobile.touched">This field is required.</span>
+    <span style="color: red;" *ngIf="mobile && mobile.errors?.['pattern'] && mobile.touched">Enter valid number.</span><br>
+
+    <label class="mb-2 mt-3">License Number:</label>
+    <input type="text" class="form-control" placeholder="Enter Your License Number" name="license"
+        formControlName="license">
+    <span *ngIf="license?.touched && license?.errors?.['required']" style="color: red;">This field is required.</span>
+    <span *ngIf="license?.touched && license?.errors?.['pattern']" style="color: red;">Enter valid number.</span><br>
+
+
+    <label class="mt-3">Aadhar Number:</label>
+    <input type="text" placeholder="Enter Your Aadhar Number" name="adhar" formControlName="adhar"
+        class="form-control mt-3">
+    <span *ngIf="adhar?.touched && adhar?.errors?.['required']" class="text-danger">This field is required.</span>
+    <span *ngIf="adhar?.touched && adhar?.errors?.['pattern']" style="color: red;">Enter valid number.</span><br>
+    <div class="row">
+        <div class="col-6 md-3">
+            <button class="btn btn-block btn1 btn-primary mt-3" type="Submit" [disabled]="driverForm.invalid">{{data? 'Edit' : 'Submit'}}</button>
+
+        </div>
+        <div class="col-6 md-3">
+            <button class=" btn btn-danger  btn1 mt-3" type="button" routerLink="/drivers">Cancel</button>
+        </div>
+    </div>
+
+</form>

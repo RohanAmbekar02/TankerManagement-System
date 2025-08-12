@@ -1,0 +1,50 @@
+
+table {
+  width: 80%;
+   margin-top: -500;
+ 
+
+}
+.div1{
+  background-color: rgb(66, 66, 66);
+  height: 770px;
+  
+}
+.font{
+  font-family: Arial;
+    margin-top: 50px;
+    font-size: 20px;
+   cursor: pointer;
+    
+} 
+.back{
+  background-color: #dba527;
+  border: none;
+}
+.font1{
+  font-family: Arial;
+}
+th{
+font-family: Arial;
+font-size: 15px;
+}
+td{
+font-family: Arial;
+font-size: 15px;
+}
+.icon{
+  font-size: 30px;
+  color :green;
+  background-color:rgb(223, 217, 217);
+  border-radius: 50%;
+ padding:10px;
+ height: 50px;
+ width: 50px;
+}
+.iconpdf{
+  font-size: 30px;
+  background-color: rgb(223, 217, 217);
+  border-radius: 50px;
+ padding:10px;
+ 
+}

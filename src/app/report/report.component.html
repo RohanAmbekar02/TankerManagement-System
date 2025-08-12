@@ -1,0 +1,139 @@
+<!-- Sidebar -->
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-md-2  bg-dark text-white  p-4" style="height: 670px;">
+            <h2 class="mt-1 mb-5 font">Admin Panel</h2>
+
+            <h3 class="mb-4 font" routerLink="/dashboard">
+                <i class="fa-solid fa-clipboard mr-3"></i>Dashboard
+            </h3>
+            <h3 class="mb-4 font" routerLink="/tanker-table">
+                <i class="fa-solid fa-list mr-2"></i> Tanker List
+            </h3>
+            <h3 class="mb-4 font" routerLink="/driver-table">
+                <i class="fa-solid fa-user-nurse mr-2"></i> Drivers
+            </h3>
+            <h3 class="mb-4 font">
+                <i class="fa-solid fa-bookmark mr-2"></i> Bookings
+            </h3>
+            <h3 class="mb-4 font" routerLink="/report">
+                <i class="fa-solid fa-file-export" routerLink="/report"></i> Reports
+            </h3>
+        </div>
+    </div>
+</div>
+
+<div class="side">
+    <div class="container-fluid text-white back">
+        <div class="col-12">
+            <div class="row ">
+
+                <div class="col-10">
+                    <h1 class="pt-4" style="font-family: Arial; ">Tanker Supply Report</h1>
+                </div>
+                <!-- <div class="col-2  pt-4">
+                    <h2 style="font-family: Arial; cursor: pointer;">Admin <i class="fa-solid fa-user ml-2 i1"
+                            routerLink="/login"></i></h2>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Filter -->
+    <div class="input-group mt-5 text-center mb-3 w-50">
+        <input type="date" class="form-control" value="2025-06-05">
+        <button class="btn btn-primary">Filter</button>
+    </div>
+
+    <!-- Table -->
+    <div class="card mt-5">
+          <div class="container-fluid">
+            <table class="table table-hover  mt-5" style="width: 100%;">
+              <thead>
+                <tr class="text-center">
+                  <th class="font1" scope="col">Date</th>
+                  <th class="font1" scope="col">Time</th>
+                  <th class="font1" scope="col">Tanker</th>
+                  <th class="font1" scope="col">Driver</th>
+                  <th class="font1" scope="col">Route</th>
+                  <th class="font1" scope="col">Fuel Used</th>
+                  <th class="font1" scope="col">Waste</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center" >
+                  <th scope="row font1">05/06/2025</th>
+                  <td class="font1">10:30 AM</td>
+                  <td class="font1">TNK-01</td>
+                  <td class="font1">Ramesh</td>
+                  <td class="font1">Route-5</td>
+                   <td class="font1">200 </td>
+                   <td class="text-center">
+                    <button class="btn  btn-success me-3 ">
+                      Delivered
+                    </button>
+                  
+                  </td>
+                </tr>
+                <tr class="text-center" >
+                  <th scope="row font1">06/06/2025</th>
+                  <td class="font1">11:30 AM</td>
+                  <td class="font1">TNK-02</td>
+                  <td class="font1">Rajesh</td>
+                  <td class="font1">Route-6</td>
+                   <td class="font1">300 </td>
+                   <td class="text-center">
+                    <button class="btn  btn-success me-3 ">
+                      Delivered
+                    </button>
+                  
+                  </td>
+                </tr>
+                <tr class="text-center" >
+                  <th scope="row font1">07/06/2025</th>
+                  <td class="font1">10:30 AM</td>
+                  <td class="font1">TNK-03</td>
+                  <td class="font1">Kailash</td>
+                  <td class="font1">Route-7</td>
+                   <td class="font1">200 </td>
+                   <td class="text-center">
+                    <button class="btn  btn-success me-3 ">
+                      Delivered
+                    </button>
+                  
+                  </td>
+                </tr>
+                
+                <tr class="text-center" >
+                  <th scope="row font1">08/06/2025</th>
+                  <td class="font1">12:30 AM</td>
+                  <td class="font1">TNK-04</td>
+                  <td class="font1">Sham</td>
+                  <td class="font1">Route-9</td>
+                   <td class="font1">200 </td>
+                   <td class="text-center">
+                    <button class="btn  btn-success me-3 ">
+                      Delivered
+                    </button>
+                  
+                  </td>
+                </tr>
+                <tr class="text-center" >
+                  <th scope="row font1">10/06/2025</th>
+                  <td class="font1">10:30 AM</td>
+                  <td class="font1">TNK-04</td>
+                  <td class="font1">Ram</td>
+                  <td class="font1">Route-4</td>
+                   <td class="font1">200 </td>
+                   <td class="text-center">
+                    <button class="btn  btn-success me-3 ">
+                      Delivered
+                    </button>
+                  
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>

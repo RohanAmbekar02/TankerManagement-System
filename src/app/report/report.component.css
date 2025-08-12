@@ -1,0 +1,34 @@
+.side{
+    margin-left: 200px;
+    margin-top: -670px;
+}
+ .div1{
+  background-color: rgb(66, 66, 66);
+  height: 770px;
+  
+}
+.back{
+  background-color: #dba527;
+  height: 70px;
+  border: none;
+}
+.font1{
+  font-family: Arial;
+  font-size: 15px;
+}
+.font{
+  font-family: Arial;
+    margin-top: 50px;
+  font-size: 20px;
+    cursor: pointer;
+}
+.font1{
+  font-family: Arial;
+}
+.card{
+  width: 98%;
+  margin-left: 20px;
+}
+.input-group{
+    margin-left: 300px;
+}

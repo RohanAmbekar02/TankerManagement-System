@@ -1,0 +1,66 @@
+<!-- Sidebar -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 div1 bg-dark text-white  p-4">
+      <h2 class="mt-3 mb-5 font">Admin Panel</h2>
+
+      <h3 class="mb-4 font" routerLink="/dashboard">
+        <i class="fa-solid fa-clipboard mr-3"></i>Dashboard
+      </h3>
+      <h3 class="mb-4 font" routerLink="/tanker-table">
+        <i class="fa-solid fa-list mr-2"></i> Tanker List
+      </h3>
+      <h3 class="mb-4 font" routerLink="/driver-table">
+        <i class="fa-solid fa-user-nurse mr-2"></i> Drivers
+      </h3>
+      <h3 class="mb-4 font">
+        <i class="fa-solid fa-bookmark mr-2"></i> Bookings
+      </h3>
+      <h3 class="mb-4 font"routerLink="/report">
+        <i class="fa-solid fa-file-export"></i> Reports
+      </h3>
+    </div>
+
+    <div class="col-md-10 " >
+      <div class="row  back">
+        <div class="col-8 ">
+          <h1 class="ml-3 pt-3 pb-2 text-white">Tanker List</h1>
+        </div>
+        <div class="col-4 mt-1">
+          <button class=" ml-2 back" (click)="exportToExcel()"><i class="fa-solid fa-file-excel icon"></i></button>
+          <button class=" ml-2 back" (click)="exportToPDF()"><i class="fa-solid fa-file-pdf text-danger iconpdf"></i>  </button>
+          <button mat-button class="btn btn-primary ml-4" style=" background-color: rgb(66, 66, 66);" (click)="openDialog()">Add Tankers</button>
+
+        </div>
+      </div>
+      <div class="card mt-5">
+          <table class="table table-hover side mt-5" style="width: 100%;">
+        <thead>
+          <tr class="text-center">
+            <th class="font1" scope="col">ID</th>
+            <th  class="font1" scope="col">Tanker Number</th>
+            <th  class="font1" scope="col">Driver Name</th>
+            <th class="font1" scope="col">Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr *ngFor="let data of tankerData">
+            <th scope="row">{{data.id}}</th>
+            <td>{{data.tnum}}</td>
+            <td>{{data.dname}}</td>
+            <td><button class="btn btn-primary">{{data.stat}}</button></td>
+            <td><button class="btn btn-success"type="Submit"(click)="editForm(data)"><i class="fa-solid fa-pen-to-square me-2"></i>Edit</button>
+              &nbsp;<button class="btn btn-danger" (click)="deleteRecord(data.id)"><i class="fa-solid fa-trash p-1 me-2"></i>Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+</div>
+      
+
+
+
+
+    </div>

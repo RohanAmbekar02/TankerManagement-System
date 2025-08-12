@@ -1,0 +1,97 @@
+<div class="side">
+<!-- <div class="container">
+  <div *ngIf="alertMessage" class="alert alert-{{alertType}} alert-dismissible fade show" role="alert">
+  {{ alertMessage }}
+  <button type="button" class="close text-dark" data-dismiss="alert" aria-label="Close" (click)="alertMessage = ''"></button>
+</div> -->
+<div class="container ">
+<div *ngIf="alertMessage" class="snack w-50 alert alert-{{alertType}} alert-warning alert-dismissible fade show" role="alert">
+  {{ alertMessage }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="alertMessage = ''">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+</div>
+  <form class="form mt-2" [formGroup]="signupForm" (ngSubmit)="signFormSubmit()">
+    <h4 style="color: red; font-size: 24px;" class="text-center ">SignUp</h4>
+
+    <label><i class="bi bi-person-fill "></i> Enter Your Name:</label>
+    <input type="text" class="form-control mt-2 " formControlName="name" placeholder="Enter your name" required>
+    <span class="text-danger" *ngIf="username && username.invalid && username.touched">This feild is mandotary.</span><br>
+
+    <label class=""><i class="bi bi-geo-alt-fill"></i> Enter your Address:</label>
+    <textarea class="form-control mt-2" formControlName="addresss" placeholder="Enter your address" required></textarea>
+    <span class="text-danger" *ngIf="addresss && addresss.invalid && addresss.touched">This feild is mandotary.</span><br>
+
+    <label class=""><i class="bi bi-envelope-fill"></i> Enter Your Email Id:</label>
+    <input type="email" class="form-control mt-2" formControlName="email" placeholder="Enter your email" required>
+    <span class="text-danger" *ngIf="useremail && useremail.invalid && useremail.touched">This
+      feild is mandotary.</span><br>
+
+
+    <label class=""><i class="bi bi-telephone-fill"></i> Enter Your Mobile Number:</label>
+    <input type="text" class="form-control mt-2" formControlName="number" placeholder="Enter your number" required>
+      <span style="color: red;" *ngIf="usernumber && usernumber.errors?.['required'] && usernumber.touched">This field is required.</span>
+    <span style="color: red;" *ngIf="usernumber && usernumber.errors?.['pattern'] && usernumber.touched">Enter valid number.</span><br>
+
+    <!-- <label class="mt-1"><i class="bi bi-lock-fill"></i> Enter Your Password:</label>
+    <input type="password" class="form-control mt-2" formControlName="password" placeholder="Enter your password"
+      required>
+    <span class="text-danger" *ngIf="userpassword && userpassword.invalid && userpassword.touched">This feild is
+      mandotary.</span><br>
+
+      <label><i class="bi bi-lock-fill"></i> Confirm Password:</label>
+      <input type="password" formControlName="confirmPassword" class="form-control" name="confirmPassword" placeholder="Confirm your password">
+      <div *ngIf="f.confirmPassword.touched && f.confirmPassword.errors?.confirmedValidator" class="text-danger">
+        Password does not  match.</div> -->
+
+        <!-- Password Field -->
+<label class="mt-1"><i class="bi bi-lock-fill"></i> Enter Your Password:</label>
+<div class="input-group mt-2">
+  <input
+    [type]="showPassword ? 'text' : 'password'"
+    class="form-control"
+    formControlName="password"
+    placeholder="Enter your password"
+    required
+  />
+  <button class="btn btn-outline-secondary" type="button" (click)="togglePasswordVisibility('password')">
+    <i class="bi" [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'"></i>
+  </button>
+</div>
+<span class="text-danger" *ngIf="userpassword && userpassword.invalid && userpassword.touched">
+  This field is mandatory.
+</span>
+
+<br>
+
+<!-- Confirm Password Field -->
+<label><i class="bi bi-lock-fill"></i> Confirm Password:</label>
+<div class="input-group">
+  <input
+    [type]="showConfirmPassword ? 'text' : 'password'"
+    class="form-control"
+    formControlName="confirmPassword"
+    placeholder="Confirm your password"
+  />
+  <button class="btn btn-outline-secondary" type="button" (click)="togglePasswordVisibility('confirm')">
+    <i class="bi" [ngClass]="showConfirmPassword ? 'bi-eye-slash' : 'bi-eye'"></i>
+  </button>
+</div>
+<div *ngIf="f.confirmPassword.touched && f.confirmPassword.errors?.confirmedValidator" class="text-danger">
+  Password does not match.
+</div>
+
+
+    <div class="row">
+      <div class="col-12">
+        <button type="submit" [disabled]="signupForm.invalid"class="btn btn-success mt-3" style="width: 100%;;">SignUp</button>
+      </div>
+    </div>
+
+    <hr>
+    <p class="mt-1 text-center">Already have an account? <a routerLink="/login">Log In</a></p>
+  </form>
+</div>
+<!-- </div> -->
+<router-outlet></router-outlet>

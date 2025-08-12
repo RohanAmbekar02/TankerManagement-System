@@ -1,0 +1,90 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "tnum": "33333333",
+      "dname": "dadasaheb",
+      "stat": "available",
+      "id": "__hrRMC"
+    },
+    {
+      "tnum": "assss",
+      "dname": "daaaaaaaaa",
+      "stat": "ddddd",
+      "id": "kRymiZJ"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "tankerData": [],
+  "driversData": [
+    {
+      "name": "Gopal Nalawade",
+      "mobile": "9078546743",
+      "adhar": "120345458980",
+      "license": "1232454678912346",
+      "id": 1
+    },
+    {
+      "name": "Gopal Nalawade",
+      "mobile": "9657616465",
+      "adhar": "123476767878",
+      "license": "1232453244323323",
+      "id": 2
+    },
+    {
+      "name": "Shamlal Tambe",
+      "mobile": "7499414748",
+      "adhar": "494003858707",
+      "license": "7741068506123456",
+      "id": 3
+    },
+    {
+      "name": "Devdas Mane",
+      "mobile": "9657616465",
+      "adhar": "494003858707",
+      "license": "9809758009787667",
+      "id": 4
+    }
+  ],
+  "signup": [
+    {
+      "name": "Admin",
+      "address": "Pune",
+      "email": "admin@gmail.com",
+      "number": 7898564578,
+      "password": "admin@1234",
+      "id": 1
+    },
+    {
+      "name": "sanika",
+      "address": "watephal",
+      "email": "sanika123@gmail.com",
+      "number": 67567876,
+      "password": "sanika123",
+      "id": 2
+    }
+  ]
+}

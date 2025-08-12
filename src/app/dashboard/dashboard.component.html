@@ -1,0 +1,100 @@
+<!-- Sidebar -->
+<div class="container-fluid ">
+   <div class="row">
+      <div class="col-md-2  bg-dark text-white  p-4" style="height: 670px;">
+         <h2 class="mt-1 mb-5 font">Admin Panel</h2>
+
+         <h3 class="mb-4 font" routerLink="dashboard">
+            <i class="fa-solid fa-clipboard mr-3"></i>Dashboard
+         </h3>
+         <h3 class="mb-4 font" routerLink="/tanker-table">
+            <i class="fa-solid fa-list mr-2"></i> Tanker List
+         </h3>
+         <h3 class="mb-4 font" routerLink="/driver-table">
+            <i class="fa-solid fa-user-nurse mr-2"></i> Drivers
+         </h3>
+         <h3 class="mb-4 font">
+            <i class="fa-solid fa-bookmark mr-2"></i> Bookings
+         </h3>
+         <h3 class="mb-4 font"routerLink="/report">
+            <i class="fa-solid fa-file-export"routerLink="/report"></i> Reports
+         </h3>
+      </div>
+   </div>
+</div>
+
+<div class="side">
+   <div class="container-fluid text-white back">
+      <div class="col-12">
+         <div class="row " >
+
+            <div class="col-10">
+               <h1 class="pt-4 ml-5" style="font-family: Arial;  ">Tanker Management System</h1>
+            </div>
+            <div class="col-2  pt-4">
+               <h2 style="font-family: Arial; cursor: pointer;">Admin <i class="fa-solid fa-user ml-2 i1" (click)="logout()"></i></h2>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="col-12">
+         <div class="row">
+            <div class="col-4">
+               <div class="p-4 tanker-card card-animate font1"routerLink="/tanker-table">
+                  <i class="fa-solid fa-truck-droplet mt-4 " style="float:left; margin-left: 40px; font-size:25px"></i>
+                  <h2 class="pt-3 pb-0 mb-0 font1"  >&nbsp; Total Tankers </h2>
+                  <h1 style="margin-left: 90px;" class="mt-0">0{{ totalTankers }} </h1>
+               </div>
+            </div>
+
+            <div class="col-4">
+               <div class="p-4 tanker-card card-animate font1"routerLink="/location">
+                  <i class="fa-solid fa-location-dot mt-3" style="float:left; margin-left: 40px; font-size:25px"></i>
+                  <h2 class="pt-3 pb-0 mb-0 font1" >&nbsp; Active Routes</h2>
+                  <h1 style="margin-left: 70px;">16</h1>
+            </div>
+            </div>
+
+
+            <div class="col-4">
+               <div class="p-4 tanker-card card-animate font1"routerLink="/driver-table">
+                  <i class="fa-solid fa-user-nurse  mt-3" style="float:left; margin-left: 40px; font-size:25px"></i>
+                  <h2 class="pt-3 pb-0 mb-0 font1" >&nbsp; Total Drivers </h2>
+                  <h1 style="margin-left: 75px;">0{{ totalDrivers }}</h1>
+              </div>
+           </div>
+
+
+            <div class="col-4">
+               <div class="  p-4 tanker-card card-animate font1">
+                  <i class="fa-solid fa-gas-pump mt-4" style="float:left; margin-left: 40px; font-size:20px"></i>
+                  <h2 class="pt-3 pb-0 mb-0 font1">&nbsp;&nbsp; Fuel/Waste </h2>
+                  <h1 style="margin-left: 75px;">1000L</h1>
+               </div>
+            </div>
+
+            <div class="col-4">
+               <div class="  p-4 tanker-card card-animate font1">
+                  <i class="fa-solid fa-gas-pump mt-4" style="float:left; margin-left: 40px; font-size:20px"></i>
+                  <h2 class="pt-3 pb-0 mb-0 font1">&nbsp; Capacity </h2>
+                  <h1 style="margin-left: 75px;">5000L</h1>
+               </div>
+            </div>
+
+            <div class="col-4">
+               <div class="p-4 tanker-card card-animate font1"routerLink="/savewater">
+                  <i class="fa-solid fa-droplet mt-4" style="float:left; margin-left: 40px; font-size:30px"></i>
+                  <h1 class="p-4 pb-0 font1" >&nbsp;&nbsp; Save Water </h1>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+  
+
+
+
+   <router-outlet></router-outlet>

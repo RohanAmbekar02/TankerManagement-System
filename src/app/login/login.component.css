@@ -1,0 +1,15 @@
+.down {
+
+    margin-top: 80px;
+}
+.form {
+    width: 33%;
+    margin-left: 360px;
+    box-shadow: 3px 3px 10px 10px rgb(159, 156, 156);
+    padding: 30px;
+    border-radius: 3px;
+    height: 450px;
+}
+.snack {
+    margin-left: 230px;
+}

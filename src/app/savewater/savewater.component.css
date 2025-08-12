@@ -1,0 +1,28 @@
+.font{
+  font-family: Arial;
+    margin-top: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.side{
+    margin-left: 200px;
+    margin-top: -670px;
+}
+.font1{
+  font-family: Arial;
+  cursor: pointer;
+}
+.back{
+  background-color: #dba527;
+}.div1{
+  background-color: rgb(66, 66, 66);
+  height: 670px;
+  
+}
+.img-fluid {
+  margin-top: 80px;
+  margin-left: 320px;
+  width: 50%;
+background-position: center center;
+  height: 300px;
+}
